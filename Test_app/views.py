@@ -21,6 +21,12 @@ class UserListAPIView(ListAPIView):
     serializer_class = TodoSerializers
 
 
-class UserCreateAPIView(ListAPIView):
+class UserCreateAPIView(CreateAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializers
+
+
+class UserUpdateAPIView(UpdateAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializers
+    lookup_field = 'id'
