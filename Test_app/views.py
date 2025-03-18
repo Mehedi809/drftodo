@@ -30,3 +30,9 @@ class UserUpdateAPIView(UpdateAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializers
     lookup_field = 'id'
+
+
+class UserRetrieveAPIView(RetrieveAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializers
+    lookup_field = 'id'
