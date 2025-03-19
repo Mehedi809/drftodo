@@ -4,6 +4,7 @@ from rest_framework.generics import (
     CreateAPIView,
     RetrieveAPIView,
     UpdateAPIView,
+    DestroyAPIView,
     ListCreateAPIView,
     RetrieveUpdateAPIView,
     RetrieveDestroyAPIView,
@@ -36,3 +37,15 @@ class UserRetrieveAPIView(RetrieveAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializers
     lookup_field = 'id'
+
+
+class UserDestroyAPIView(DestroyAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializers
+    lookup_field = 'id'
+    
+
+    
+class UserListCreateAPIView(ListCreateAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializers

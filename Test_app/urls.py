@@ -8,4 +8,8 @@ urlpatterns = [
     path('home/UserCreateapiview/', UserCreateAPIView.as_view()),
     path('home/UserUpdateAPIView/<int:id>/', UserUpdateAPIView.as_view()),
     path('home/UserRetrieveAPIView/<int:id>/', UserRetrieveAPIView.as_view()),
+    path('home/UserDestroyAPIView/<int:id>/', UserDestroyAPIView.as_view()),
+    path('home/UserListCreateAPIView/', UserListCreateAPIView.as_view()),
+
+
 ]
